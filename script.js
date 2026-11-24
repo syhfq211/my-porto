@@ -60,6 +60,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Mobile Navigation Toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+
+  // Close mobile menu when a nav link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+    }
+  });
+}
+
 // Subtle Intersection Observer for smooth fade-in reveal
 const observerOptions = {
   root: null,
