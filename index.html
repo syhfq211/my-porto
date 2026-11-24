@@ -16,15 +16,16 @@
   <header class="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo">surei<span>space</span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu navigasi">
-        <span></span>
-        <span></span>
-      </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navLinks">
+          <span></span>
+          <span></span>
+        </button>
       <div class="nav-backdrop" id="navBackdrop"></div>
       <nav class="nav-links" id="navLinks">
         <a href="#tentang">Tentang</a>
         <a href="#projek">Projek</a>
-        <a href="#connect">Kontak <span class="arrow">↗</span></a>
+        <!-- Kontak -->
+        <a href="#connect">Kontak <span class="arrow" aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -45,7 +46,8 @@
           Bertumbuh melalui baris kode dan logika.
         </p>
         <p class="hero-bio">
-          Selamat datang di personal web saya. Tempat untuk sharing mengenai perjalanan saya sebagai mahasiswa yang ingin tau banyak hal.
+          Selamat datang di personal web saya. Tempat untuk sharing mengenai perjalanan saya sebagai mahasiswa yang ingin tahu banyak hal.
+        </p>
         <div class="hero-cta-wrap">
           <a href="#projek" class="btn-dark">
             <span>Kenal lebih dekat</span>
@@ -59,7 +61,11 @@
           <img 
             id="userPhoto" 
             src="profile.jpg" 
-            alt="Syahfiq Hikmal Tedrika" 
+            alt="Foto profil Syahfiq Hikmal Tedrika"
+            width="320"
+            height="420"
+            fetchpriority="high"
+            decoding="async"
           />
         </div>
       </div>
@@ -161,27 +167,28 @@
           <span class="contact-type">Email</span>
           <a href="mailto:halo@syahfiq.my.id" id="emailLink" class="contact-val">
             halo@syahfiq.my.id
-            <span class="contact-arrow">↗</span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
           </a>
         </div>
 
         <!-- Discord -->
         <div class="contact-row">
           <span class="contact-type">Discord</span>
-          <button id="copyDiscordBtn" class="contact-val btn-copy" data-discord="syahfiq">
+          <button id="copyDiscordBtn" class="contact-val btn-copy" data-discord="yukinasluwx">
             @yukinasluwx
-            <span class="contact-arrow">Copy ID</span>
+            <span class="contact-arrow" aria-hidden="true">Copy ID</span>
           </button>
         </div>
 
-        <!-- Instagram -->
-        <div class="contact-row">
-          <span class="contact-type">Instagram</span>
-          <a href="https://instagram.com/makinasurei/" target="_blank" rel="noopener noreferrer" class="contact-val">
-            @makinasurei
-            <span class="contact-arrow">↗</span>
-          </a>
-        </div>
+          <!-- Instagram -->
+          <div class="contact-row">
+            <span class="contact-type">Instagram</span>
+            <a href="https://instagram.com/makinasurei/" target="_blank" rel="noopener noreferrer" class="contact-val">
+              @makinasurei
+              <span class="contact-arrow" aria-hidden="true">↗</span>
+              <span class="sr-only">(buka di tab baru)</span>
+            </a>
+          </div>
       </div>
     </div>
 

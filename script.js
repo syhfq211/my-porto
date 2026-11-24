@@ -69,6 +69,7 @@ function toggleMenu(show) {
   const isOpen = show !== undefined ? show : !navLinks.classList.contains('active');
   navToggle.classList.toggle('active', isOpen);
   navLinks.classList.toggle('active', isOpen);
+  navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   if (navBackdrop) navBackdrop.classList.toggle('active', isOpen);
 }
 
