@@ -16,7 +16,7 @@ function showToast(message) {
 const copyDiscordBtn = document.getElementById('copyDiscordBtn');
 if (copyDiscordBtn) {
   copyDiscordBtn.addEventListener('click', async () => {
-    const discordId = copyDiscordBtn.dataset.discord || 'syahfiq';
+    const discordId = copyDiscordBtn.dataset.discord || 'yukinasluwx';
     try {
       await navigator.clipboard.writeText(discordId);
       showToast(`Discord ID disalin: @${discordId}`);
@@ -25,6 +25,36 @@ if (copyDiscordBtn) {
     }
   });
 }
+
+// Copy Email
+const copyEmailBtn = document.getElementById('copyEmailBtn');
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', async () => {
+    const email = copyEmailBtn.dataset.email || 'halo@syahfiq.my.id';
+    try {
+      await navigator.clipboard.writeText(email);
+      showToast(`Email disalin: ${email}`);
+    } catch {
+      showToast('Gagal menyalin email');
+    }
+  });
+}
+
+// Live Local Time (WITA - UTC+8)
+const liveTimeEl = document.getElementById('liveTime');
+function updateTime() {
+  if (!liveTimeEl) return;
+  const now = new Date();
+  const timeString = now.toLocaleTimeString('id-ID', {
+    timeZone: 'Asia/Makassar',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  });
+  liveTimeEl.textContent = `${timeString} WITA`;
+}
+updateTime();
+setInterval(updateTime, 30000);
 
 // Sticky Navbar with blur transition on scroll
 const navbar = document.querySelector('.navbar');

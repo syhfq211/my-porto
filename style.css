@@ -423,9 +423,51 @@ body {
   color: var(--text-dark);
 }
 
+.status-item.right {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
 .status-item.right .value {
   color: var(--text-muted);
   font-weight: 500;
+}
+
+.live-time {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(203, 153, 126, 0.12);
+  border: 1px solid var(--border-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-copy-inline {
+  background: rgba(255, 241, 230, 0.08);
+  border: 1px solid var(--border-dark);
+  color: var(--c-sage);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-copy-inline:hover {
+  background: var(--c-terracotta);
+  border-color: var(--c-terracotta);
+  color: #fff;
 }
 
 /* ================= CONTENT SECTION ================= */

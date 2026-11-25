@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Syahfiq Hikmal Tedrika — Mahasiswa & Pengembang Bot" />
-  <title>My Porto</title>
+  <title>sureispace - personal portfolio</title>
+  <meta property="og:title" content="Syahfiq Hikmal Tedrika — Personal Space" />
+  <meta property="og:description" content="Eksplorasi teknologi, pembuatan automasi bot Python, dan catatan perjalanan mahasiswa." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#fbf8f5" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet" />
@@ -79,9 +83,10 @@
         <span class="label">SAAT INI</span>
         <span class="value">Mahasiswa Aktif</span>
       </div>
-      <div class="status-item right">
-        <span class="value">STMIK Widya Cipta Dharma</span>
-      </div>
+        <div class="status-item right">
+          <span class="value">STMIK Widya Cipta Dharma</span>
+          <span class="live-time" id="liveTime" aria-label="Waktu lokal">10:00 WITA</span>
+        </div>
     </div>
   </div>
 
@@ -165,10 +170,15 @@
         <!-- Email -->
         <div class="contact-row">
           <span class="contact-type">Email</span>
-          <a href="mailto:halo@syahfiq.my.id" id="emailLink" class="contact-val">
-            halo@syahfiq.my.id
-            <span class="contact-arrow" aria-hidden="true">↗</span>
-          </a>
+          <div class="contact-actions">
+            <a href="mailto:halo@syahfiq.my.id" id="emailLink" class="contact-val">
+              halo@syahfiq.my.id
+              <span class="contact-arrow" aria-hidden="true">↗</span>
+            </a>
+            <button id="copyEmailBtn" class="btn-copy-inline" data-email="halo@syahfiq.my.id" aria-label="Salin alamat email">
+              Salin
+            </button>
+          </div>
         </div>
 
         <!-- Discord -->
